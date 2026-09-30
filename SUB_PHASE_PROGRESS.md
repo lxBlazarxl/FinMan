@@ -374,8 +374,8 @@
     * Returns total household liquid pool and breakdown per family member.
     * Regular `MEMBER` requesting this MUST receive `403 Forbidden`.
 * **Sub-tasks**:
-  - [ ] Implement `app/api/v1/accounts.py`.
-  - [ ] Implement `app/api/v1/balances.py`.
+  - [x] Implement `app/api/v1/accounts.py`.
+  - [x] Implement `app/api/v1/balances.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
