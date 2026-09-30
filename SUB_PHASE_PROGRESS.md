@@ -514,6 +514,13 @@
   * `pytest tests/test_sms_parser.py -v` -> `5 passed`
 
 ---
+### Worker Execution Log
+
+| Timestamp | Task | Command/Check | Result |
+|---|---|---|---|
+| 2026-09-30 | Task 2.2.1 | `pytest -v tests/test_sms_parser.py` / `python -c "from app.api.v1.transactions import router as tx_router ..."` | `Transaction Router & Mount OK` |
+
+---
 
 ### Sub-Phase 2.2: Transaction Ingestion & Balance Lifecycle
 
@@ -537,8 +544,8 @@
       * Deletes `Transaction` record.
     * Returns `{"detail": "Transaction deleted successfully"}`.
 * **Sub-tasks**:
-  - [ ] Implement `app/api/v1/transactions.py`.
-  - [ ] Mount transaction router in `app/main.py`.
+  - [x] Implement `app/api/v1/transactions.py`.
+  - [x] Mount transaction router in `app/main.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
