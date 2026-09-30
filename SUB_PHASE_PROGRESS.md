@@ -96,7 +96,7 @@
   * Provide a standard session dependency: `def get_db(): ...` that yields a session and ensures clean closure.
 * **Sub-tasks**:
   - [x] Implement `app/core/database.py` with SQLAlchemy `create_engine`, `sessionmaker`, `event.listens_for(engine, "connect")`.
-  - [ ] Implement `get_db()` generator yielding `Session`.
+  - [x] Implement `get_db()` generator yielding `Session`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -760,3 +760,4 @@
 | :--- | :--- | :--- | :---: | :--- |
 | 2026-09-30 | Task 1.1.1 | — | `PASS` | Dependencies OK |
 | 2026-09-30 | Task 1.1.2 | — | `PASS` | Config OK: FinMan Backend |
+| 2026-09-30 | Task 1.1.3 | — | `PASS` | SQLite Engine OK: FK=ON, WAL=ON |
