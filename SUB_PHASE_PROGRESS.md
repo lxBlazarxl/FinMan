@@ -437,6 +437,7 @@
 | Timestamp | Task | Status |
 | :--- | :--- | :---: |
 | *Now* | Task 1.6.2 | PASS |
+| *Now* | Task 2.1.1 | PASS |
 
 
 ### Sub-Phase 2.1: Regex Parser Rule Engine for Indian Bank SMS
@@ -457,7 +458,7 @@
     * `bank_name: Optional[str] = None` (e.g. "SBI", "HDFC", "UPI")
     * `confidence: ConfidenceLevel = ConfidenceLevel.LOW`
 * **Sub-tasks**:
-  - [ ] Implement `app/schemas/sms.py`.
+   - [x] Implement `app/schemas/sms.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "

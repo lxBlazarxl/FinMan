@@ -9,6 +9,7 @@ from app.schemas.auth import Token, TokenPayload, LoginRequest, RegisterHousehol
 from app.schemas.household import HouseholdResponse
 from app.schemas.user import UserResponse, MemberCreateRequest
 from app.schemas.transaction import TransactionCreate, TransactionResponse
+from app.schemas.sms import SMSParseRequest, SMSParseResult, ConfidenceLevel
 
 __all__ = [
     "Token",
@@ -25,4 +26,7 @@ __all__ = [
     "HouseholdBalanceResponse",
     "TransactionCreate",
     "TransactionResponse",
+    "SMSParseRequest",
+    "SMSParseResult",
+    "ConfidenceLevel",
 ]
