@@ -401,7 +401,7 @@
   * Add `CORSMiddleware` with `allow_origins=["*"]`, `allow_credentials=True`, `allow_methods=["*"]`, `allow_headers=["*"]`.
   * Include a health-check endpoint: `GET /health` -> `{"status": "healthy", "service": "finman"}`.
 * **Sub-tasks**:
-  - [ ] Implement `app/main.py`.
+  - [x] Implement `app/main.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -768,4 +768,6 @@
 | 2026-09-30 | Task 1.4.2 | — | `PASS` | Auth Dependencies OK |
 | 2026-09-30 | Task 1.4.3 | — | `PASS` | Auth & Household Routers OK |
 | 2026-09-30 | Task 1.5.1 | — | `PASS` | Balance Service OK |
+| 2026-09-30 | Task 1.5.2 | — | `PASS` | Accounts & Balances Routers OK |
+| 2026-09-30 | Task 1.6.1 | — | `PASS` | Main App Factory OK: All Phase 1 routes mounted |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
