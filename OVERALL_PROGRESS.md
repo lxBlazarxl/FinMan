@@ -18,7 +18,7 @@
 | Phase | Description | Status | Completion % | Gate Sign-off |
 | :--- | :--- | :---: | :---: | :---: |
 | **Phase 1** | **Core Backend & Ledger Engine** (DB, Auth, RBAC, Accounts, Atomic Balances) | `COMPLETED` | 100% | [x] Gate passed |
-| **Phase 2** | **Ingestion Pipeline & Financial Analytics** (Dynamic SMS Parser, Transactions, Reports) | `NOT STARTED` | 0% | [ ] Pending |
+| **Phase 2** | **Ingestion Pipeline & Financial Analytics** (Dynamic SMS Parser, Transactions, Reports) | `COMPLETED` | 100% | [x] Gate passed |
 | **Phase 3** | **Client Interface (UI / Frontend)** (Mobile/Web Client, SMS Paste Dock, Dashboards) | `NOT STARTED` | 0% | [ ] Pending |
 | **Phase 4** | **Lab Packaging, Seeding & Release** (Indian Household Seeder, Test Suite, Docs) | `NOT STARTED` | 0% | [ ] Pending |
 
@@ -50,9 +50,10 @@
   * Transaction Query Engine with filters (`date_range`, `category`, `account_id`, `user_id`).
   * Monthly category spend analytics (Aggregations for pie/donut charts).
 * **Phase 2 Exit Gate**:
-  - [ ] Parser tests pass on 10+ real-world Indian bank SMS samples without crashing.
-  - [ ] Unmatched SMS messages gracefully return `confidence: "LOW"` without HTTP 500 errors.
-  - [ ] Monthly category aggregation returns accurate sums matching database records.
+    - [x] Parser tests pass on 10+ real-world Indian bank SMS samples without crashing.
+    - [x] Unmatched SMS messages gracefully return `confidence: "LOW"` without HTTP 500 errors.
+    - [x] Monthly category aggregation returns accurate sums matching database records.
+
 
 ---
 
@@ -116,3 +117,4 @@ Before an agent or developer advances to the next Phase:
 | Timestamp | Phase | Worker / Agent | Summary of Changes | Test Result |
 | :--- | :---: | :--- | :--- | :---: |
 | *Now* | Phase 1 | — | Phase 1 exit gate: `pytest tests/test_phase1.py -v` PASS | PASS |
+| *Now* | Phase 2 | — | Phase 2 exit gate: `pytest tests/test_phase2.py -v` PASS | PASS |

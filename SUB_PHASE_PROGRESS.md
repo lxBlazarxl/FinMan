@@ -647,8 +647,9 @@
   3. `test_transaction_deletion_and_balance_restoration`: Deletes transaction, asserts account balance reverted.
   4. `test_member_cannot_view_other_member_transactions`: Member attempts to query admin transactions, asserts isolation.
   5. `test_monthly_category_analytics`: Logs ₹2,000 "Groceries" and ₹500 "Transport", verifies breakdown totals and percentages.
-* **Sub-tasks**:
-  - [ ] Implement `tests/test_phase2.py`.
+  * **Sub-tasks**:
+   - [x] Implement `tests/test_phase2.py`.
+
 * **Verification Command (PHASE 2 EXIT GATE)**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && pytest tests/test_phase2.py -v

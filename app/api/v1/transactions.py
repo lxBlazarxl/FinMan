@@ -17,19 +17,16 @@ from app.services.sms_parser import parse_bank_sms
 from app.models.enums import TransactionType, UserRole
 from app.models.user import User
 
-router = APIRouter(prefix="", tags=["Transactions"])
-
-@router.get("")
-def _route_hint():
-    return []
+router = APIRouter(prefix="/transactions", tags=["Transactions"])
 
 
-@router.post("/transactions/parse-sms", response_model=SMSParseResult)
+@router.post("/parse-sms", response_model=SMSParseResult)
 def parse_sms(payload: SMSParseRequest) -> SMSParseResult:
     return parse_bank_sms(payload.sms_text)
 
 
-@router.post("/transactions/", response_model=TransactionResponse)
+@router.post("", response_model=TransactionResponse)
+@router.post("/", response_model=TransactionResponse)
 def create_transaction(
     payload: TransactionCreate,
     db: Session = Depends(get_db),
@@ -60,6 +57,7 @@ def create_transaction(
     return TransactionResponse.model_validate(tx)
 
 
+@router.get("", response_model=list[TransactionResponse])
 @router.get("/", response_model=list[TransactionResponse])
 def get_transactions(
     start_date: datetime | None = None,
@@ -106,7 +104,7 @@ def get_transactions(
     return [TransactionResponse.model_validate(tx) for tx in txs]
 
 
-@router.delete("/transactions/{id}")
+@router.delete("/{id}")
 def delete_transaction(
     id: str,
     db: Session = Depends(get_db),
