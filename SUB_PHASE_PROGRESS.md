@@ -285,7 +285,7 @@
   * Implement `require_admin(current_user: User = Depends(get_current_user)) -> User`:
     * Checks `if current_user.role != UserRole.ADMIN`: raises `HTTPException(status_code=403, detail="Admin access required")`.
 * **Sub-tasks**:
-  - [ ] Create `app/api/__init__.py` and `app/api/deps.py`.
+  - [x] Create `app/api/__init__.py` and `app/api/deps.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -765,4 +765,5 @@
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
 | 2026-09-30 | Task 1.3.1 | — | `PASS` | Schemas Validation OK: Negative amount properly blocked |
 | 2026-09-30 | Task 1.4.1 | — | `PASS` | Security Module OK |
+| 2026-09-30 | Task 1.4.2 | — | `PASS` | Auth Dependencies OK |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
