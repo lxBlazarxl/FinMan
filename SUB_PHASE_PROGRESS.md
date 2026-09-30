@@ -95,7 +95,7 @@
     2. `PRAGMA journal_mode = WAL;` (Enables Write-Ahead Logging for high-concurrency reads).
   * Provide a standard session dependency: `def get_db(): ...` that yields a session and ensures clean closure.
 * **Sub-tasks**:
-  - [ ] Implement `app/core/database.py` with SQLAlchemy `create_engine`, `sessionmaker`, `event.listens_for(engine, "connect")`.
+  - [x] Implement `app/core/database.py` with SQLAlchemy `create_engine`, `sessionmaker`, `event.listens_for(engine, "connect")`.
   - [ ] Implement `get_db()` generator yielding `Session`.
 * **Verification Command**:
   ```bash
