@@ -255,7 +255,7 @@
   * Implement `get_password_hash(password: str) -> str`.
   * Implement `create_access_token(data: dict, expires_delta: Optional[timedelta] = None) -> str` using `pyjwt` with algorithm `"HS256"`.
 * **Sub-tasks**:
-  - [ ] Implement `app/core/security.py`.
+  - [x] Implement `app/core/security.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -764,4 +764,5 @@
 | 2026-09-30 | Task 1.2.1 | — | `PASS` | Enums and Base OK |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
 | 2026-09-30 | Task 1.3.1 | — | `PASS` | Schemas Validation OK: Negative amount properly blocked |
+| 2026-09-30 | Task 1.4.1 | — | `PASS` | Security Module OK |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
