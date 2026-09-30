@@ -177,10 +177,10 @@
     * `date: Mapped[datetime]`: DateTime, default UTC now.
     * `raw_sms: Mapped[Optional[str]]`: TEXT, nullable (stores original SMS if parsed).
 * **Sub-tasks**:
-  - [ ] Implement `app/models/household.py`.
-  - [ ] Implement `app/models/user.py`.
-  - [ ] Implement `app/models/account.py`.
-  - [ ] Implement `app/models/transaction.py`.
+  - [x] Implement `app/models/household.py`.
+  - [x] Implement `app/models/user.py`.
+  - [x] Implement `app/models/account.py`.
+  - [x] Implement `app/models/transaction.py`.
   - [ ] Expose all models in `app/models/__init__.py`.
 * **Verification Command**:
   ```bash
@@ -762,3 +762,4 @@
 | 2026-09-30 | Task 1.1.2 | — | `PASS` | Config OK: FinMan Backend |
 | 2026-09-30 | Task 1.1.3 | — | `PASS` | SQLite Engine OK: FK=ON, WAL=ON |
 | 2026-09-30 | Task 1.2.1 | — | `PASS` | Enums and Base OK |
+| 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
