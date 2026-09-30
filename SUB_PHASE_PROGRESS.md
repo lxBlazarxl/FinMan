@@ -349,7 +349,7 @@
        * `SELECT COALESCE(SUM(current_balance), 0.0) FROM accounts JOIN users ON accounts.user_id = users.id WHERE users.household_id = :household_id`
        * Also returns breakdown per member.
 * **Sub-tasks**:
-  - [ ] Implement `app/services/balance_service.py`.
+  - [x] Implement `app/services/balance_service.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -766,4 +766,6 @@
 | 2026-09-30 | Task 1.3.1 | — | `PASS` | Schemas Validation OK: Negative amount properly blocked |
 | 2026-09-30 | Task 1.4.1 | — | `PASS` | Security Module OK |
 | 2026-09-30 | Task 1.4.2 | — | `PASS` | Auth Dependencies OK |
+| 2026-09-30 | Task 1.4.3 | — | `PASS` | Auth & Household Routers OK |
+| 2026-09-30 | Task 1.5.1 | — | `PASS` | Balance Service OK |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
