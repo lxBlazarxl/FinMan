@@ -624,8 +624,8 @@
   * `GET /api/v1/analytics/monthly-summary`:
     * Returns income, expense, and net savings.
 * **Sub-tasks**:
-  - [ ] Implement `app/api/v1/analytics.py`.
-  - [ ] Mount analytics router in `app/main.py`.
+  - [x] Implement `app/api/v1/analytics.py`.
+  - [x] Mount analytics router in `app/main.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "

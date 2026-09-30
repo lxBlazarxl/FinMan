@@ -9,6 +9,7 @@ from app.api.v1.household import router as household_router
 from app.api.v1.accounts import router as accounts_router
 from app.api.v1.balances import router as balances_router
 from app.api.v1.transactions import router as transactions_router
+from app.api.v1.analytics import router as analytics_router
 from app.core.config import settings
 from app.core.database import engine
 from app.models.base import Base
@@ -40,6 +41,7 @@ def create_app() -> FastAPI:
     app.include_router(accounts_router, prefix=settings.API_V1_STR)
     app.include_router(balances_router, prefix=settings.API_V1_STR)
     app.include_router(transactions_router, prefix=settings.API_V1_STR)
+    app.include_router(analytics_router, prefix=settings.API_V1_STR)
 
     @app.get("/health")
     def health() -> dict:
