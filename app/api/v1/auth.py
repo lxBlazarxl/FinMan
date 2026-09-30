@@ -28,30 +28,30 @@ def register_household(
     if existing_admin:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Phone number already taken")
 
-    with db.begin():
-        household = Household(name=payload.household_name)
-        db.add(household)
-        db.flush()
+    household = Household(name=payload.household_name)
+    db.add(household)
+    db.flush()
 
-        user = User(
-            household_id=household.id,
-            name=payload.admin_name,
-            phone_number=payload.phone_number,
-            password_hash=get_password_hash(payload.password),
-            role=UserRole.ADMIN,
+    user = User(
+        household_id=household.id,
+        name=payload.admin_name,
+        phone_number=payload.phone_number,
+        password_hash=get_password_hash(payload.password),
+        role=UserRole.ADMIN,
+    )
+    db.add(user)
+    db.flush()
+
+    db.add(
+        Account(
+            user_id=user.id,
+            name="Cash Wallet",
+            type=AccountType.CASH,
+            current_balance=0.0,
         )
-        db.add(user)
-        db.flush()
+    )
 
-        db.add(
-            Account(
-                user_id=user.id,
-                name="Cash Wallet",
-                type=AccountType.CASH,
-                current_balance=0.0,
-            )
-        )
-
+    db.commit()
     token = create_access_token({"sub": user.id, "role": user.role.value})
     return {"access_token": token, "token_type": "bearer", "user": UserResponse.model_validate(user)}
 

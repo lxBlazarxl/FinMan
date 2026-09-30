@@ -17,7 +17,7 @@
 
 | Phase | Description | Status | Completion % | Gate Sign-off |
 | :--- | :--- | :---: | :---: | :---: |
-| **Phase 1** | **Core Backend & Ledger Engine** (DB, Auth, RBAC, Accounts, Atomic Balances) | `NOT STARTED` | 0% | [ ] Pending |
+| **Phase 1** | **Core Backend & Ledger Engine** (DB, Auth, RBAC, Accounts, Atomic Balances) | `COMPLETED` | 100% | [x] Gate passed |
 | **Phase 2** | **Ingestion Pipeline & Financial Analytics** (Dynamic SMS Parser, Transactions, Reports) | `NOT STARTED` | 0% | [ ] Pending |
 | **Phase 3** | **Client Interface (UI / Frontend)** (Mobile/Web Client, SMS Paste Dock, Dashboards) | `NOT STARTED` | 0% | [ ] Pending |
 | **Phase 4** | **Lab Packaging, Seeding & Release** (Indian Household Seeder, Test Suite, Docs) | `NOT STARTED` | 0% | [ ] Pending |
@@ -115,4 +115,4 @@ Before an agent or developer advances to the next Phase:
 
 | Timestamp | Phase | Worker / Agent | Summary of Changes | Test Result |
 | :--- | :---: | :--- | :--- | :---: |
-| *Pending* | Phase 1 | — | Initial setup | — |
+| *Now* | Phase 1 | — | Phase 1 exit gate: `pytest tests/test_phase1.py -v` PASS | PASS |

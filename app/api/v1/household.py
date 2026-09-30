@@ -24,26 +24,26 @@ def create_member(
     if existing:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Phone number already taken")
 
-    with db.begin():
-        user = User(
-            household_id=current_admin.household_id,
-            name=payload.name,
-            phone_number=payload.phone_number,
-            password_hash=get_password_hash(payload.password),
-            role=UserRole.MEMBER,
-        )
-        db.add(user)
-        db.flush()
+    user = User(
+        household_id=current_admin.household_id,
+        name=payload.name,
+        phone_number=payload.phone_number,
+        password_hash=get_password_hash(payload.password),
+        role=UserRole.MEMBER,
+    )
+    db.add(user)
+    db.flush()
 
-        db.add(
-            Account(
-                user_id=user.id,
-                name=payload.initial_account_name or "Pocket Cash",
-                type=AccountType.CASH,
-                current_balance=0.0,
-            )
+    db.add(
+        Account(
+            user_id=user.id,
+            name=payload.initial_account_name or "Pocket Cash",
+            type=AccountType.CASH,
+            current_balance=0.0,
         )
+    )
 
+    db.commit()
     return UserResponse.model_validate(user)
 
 
