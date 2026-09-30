@@ -575,7 +575,7 @@
       * If `current_user.role == UserRole.MEMBER`: Query MUST strictly filter `WHERE user_id = current_user.id`. Any `target_user_id` query param passed is ignored.
       * If `current_user.role == UserRole.ADMIN`: If `target_user_id` is supplied, filter by it (verifying that user belongs to the same household); if omitted, return transactions across all household members.
 * **Sub-tasks**:
-  - [ ] Add filtered `GET /api/v1/transactions` endpoint in `app/api/v1/transactions.py`.
+  - [x] Add filtered `GET /api/v1/transactions` endpoint in `app/api/v1/transactions.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
