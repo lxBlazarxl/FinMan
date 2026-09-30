@@ -10,6 +10,11 @@ from app.schemas.household import HouseholdResponse
 from app.schemas.user import UserResponse, MemberCreateRequest
 from app.schemas.transaction import TransactionCreate, TransactionResponse
 from app.schemas.sms import SMSParseRequest, SMSParseResult, ConfidenceLevel
+from app.schemas.analytics import (
+    CategoryBreakdownItem,
+    CategoryBreakdownResponse,
+    MonthlySummaryResponse,
+)
 
 __all__ = [
     "Token",
@@ -29,4 +34,7 @@ __all__ = [
     "SMSParseRequest",
     "SMSParseResult",
     "ConfidenceLevel",
+    "CategoryBreakdownItem",
+    "CategoryBreakdownResponse",
+    "MonthlySummaryResponse",
 ]

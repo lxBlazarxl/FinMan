@@ -600,8 +600,8 @@
     * Use SQLAlchemy `func.sum()` and `group_by(Transaction.category)`.
     * Filter transactions within the month (default: current calendar month UTC).
 * **Sub-tasks**:
-  - [ ] Implement `app/schemas/analytics.py`.
-  - [ ] Implement `app/services/analytics_service.py`.
+  - [x] Implement `app/schemas/analytics.py`.
+  - [x] Implement `app/services/analytics_service.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
