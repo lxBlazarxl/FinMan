@@ -495,8 +495,8 @@
        * If merchant contains `hospital`, `pharmacy`, `apollo`, `1mg` -> `Medical`
        * Default fallback category -> `Miscellaneous`
 * **Sub-tasks**:
-  - [ ] Implement `app/services/sms_parser.py` with multi-regex pipeline and category inference dictionary.
-  - [ ] Create unit tests in `tests/test_sms_parser.py` covering 5 distinct Indian bank SMS variations.
+  - [x] Implement `app/services/sms_parser.py` with multi-regex pipeline and category inference dictionary.
+  - [x] Create unit tests in `tests/test_sms_parser.py` covering 5 distinct Indian bank SMS variations.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -509,6 +509,9 @@
   "
   ```
 * **Success Criteria**: Terminal outputs `SMS Parser Engine OK`.
+
+* **Run Log**:
+  * `pytest tests/test_sms_parser.py -v` -> `5 passed`
 
 ---
 
