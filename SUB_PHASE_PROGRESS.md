@@ -222,11 +222,11 @@
   * `RegisterHouseholdRequest`:
     * Validates `household_name`, `admin_name`, `phone_number` (length check: 10-15 chars), and `password` (min 6 chars).
 * **Sub-tasks**:
-  - [ ] Implement `app/schemas/auth.py` (`Token`, `TokenPayload`, `LoginRequest`, `RegisterHouseholdRequest`).
-  - [ ] Implement `app/schemas/household.py` (`HouseholdResponse`).
-  - [ ] Implement `app/schemas/user.py` (`UserResponse`, `MemberCreateRequest`).
-  - [ ] Implement `app/schemas/account.py` (`AccountCreate`, `AccountResponse`, `PersonalBalanceResponse`, `HouseholdBalanceResponse`).
-  - [ ] Implement `app/schemas/transaction.py` (`TransactionCreate`, `TransactionResponse`).
+  - [x] Implement `app/schemas/auth.py` (`Token`, `TokenPayload`, `LoginRequest`, `RegisterHouseholdRequest`).
+  - [x] Implement `app/schemas/household.py` (`HouseholdResponse`).
+  - [x] Implement `app/schemas/user.py` (`UserResponse`, `MemberCreateRequest`).
+  - [x] Implement `app/schemas/account.py` (`AccountCreate`, `AccountResponse`, `PersonalBalanceResponse`, `HouseholdBalanceResponse`).
+  - [x] Implement `app/schemas/transaction.py` (`TransactionCreate`, `TransactionResponse`).
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
@@ -762,4 +762,6 @@
 | 2026-09-30 | Task 1.1.2 | — | `PASS` | Config OK: FinMan Backend |
 | 2026-09-30 | Task 1.1.3 | — | `PASS` | SQLite Engine OK: FK=ON, WAL=ON |
 | 2026-09-30 | Task 1.2.1 | — | `PASS` | Enums and Base OK |
+| 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
+| 2026-09-30 | Task 1.3.1 | — | `PASS` | Schemas Validation OK: Negative amount properly blocked |
 | 2026-09-30 | Task 1.2.2 | — | `PASS` | Models and Tables OK: ['accounts', 'households', 'transactions', 'users'] |
