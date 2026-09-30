@@ -129,8 +129,8 @@
     * `AccountType`: `BANK = "BANK"`, `CASH = "CASH"`, `WALLET = "WALLET"`, `CREDIT_CARD = "CREDIT_CARD"`
     * `TransactionType`: `EXPENSE = "EXPENSE"`, `INCOME = "INCOME"`, `TRANSFER = "TRANSFER"`
 * **Sub-tasks**:
-  - [ ] Create `app/models/enums.py`.
-  - [ ] Create `app/models/base.py` with `class Base(DeclarativeBase)`.
+  - [x] Create `app/models/enums.py`.
+  - [x] Create `app/models/base.py` with `class Base(DeclarativeBase)`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "from app.models.enums import UserRole, AccountType, TransactionType; print('Enums OK')"
@@ -761,3 +761,4 @@
 | 2026-09-30 | Task 1.1.1 | — | `PASS` | Dependencies OK |
 | 2026-09-30 | Task 1.1.2 | — | `PASS` | Config OK: FinMan Backend |
 | 2026-09-30 | Task 1.1.3 | — | `PASS` | SQLite Engine OK: FK=ON, WAL=ON |
+| 2026-09-30 | Task 1.2.1 | — | `PASS` | Enums and Base OK |
