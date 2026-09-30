@@ -314,8 +314,8 @@
   * `GET /api/v1/household/members` (Protected by `Depends(require_admin)`):
     * Lists all family members under the admin's household.
 * **Sub-tasks**:
-  - [ ] Implement `app/api/v1/auth.py`.
-  - [ ] Implement `app/api/v1/household.py`.
+  - [x] Implement `app/api/v1/auth.py`.
+  - [x] Implement `app/api/v1/household.py`.
 * **Verification Command**:
   ```bash
   cd /home/aariz/Projects/FinMan && source .venv/bin/activate && python3 -c "
