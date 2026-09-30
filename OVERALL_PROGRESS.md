@@ -35,10 +35,10 @@
   * Atomic Balance Engine: Creating/modifying transactions atomically adjusts account balances with ACID safety.
   * Personal (`/balances/me`) and Household (`/household/total-balance`) balance queries.
 * **Phase 1 Exit Gate**:
-  - [ ] All Phase 1 test suites pass cleanly (`pytest tests/test_phase1_*.py`).
-  - [ ] `uvicorn app.main:app` runs without warnings and `/docs` is accessible.
-  - [ ] Non-admin attempting to access `/api/v1/household/*` receives strict `403 Forbidden`.
-  - [ ] Account balance mathematically updates on transaction insert/rollback.
+  - [x] All Phase 1 test suites pass cleanly (`pytest tests/test_phase1_*.py`).
+  - [x] `uvicorn app.main:app` runs without warnings and `/docs` is accessible.
+  - [x] Non-admin attempting to access `/api/v1/household/*` receives strict `403 Forbidden`.
+  - [x] Account balance mathematically updates on transaction insert/rollback.
 
 ---
 
